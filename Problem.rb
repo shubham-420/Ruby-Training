@@ -19,7 +19,7 @@ class Sales_Tax_Problem
     if input.include?(element)
       flag=true
     end
-    
+
     flag
   end
 
@@ -33,7 +33,7 @@ class Sales_Tax_Problem
     for index in (0..2)
       puts "#{sentence[index]} : #{total_cost[index]}"
     end
-    
+
     sum = total_cost.sum.to_f
     sum = sum.round(2)
     @salestax = @salestax.round(2)
