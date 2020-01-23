@@ -6,7 +6,7 @@ class Sales_Tax_Problem
     ( ( price.to_f * total_amount ) + price )
   end
 
-  def total_tax(tax,price)
+  def total_tax(tax, price)
     tax = tax.to_f + 10.00
     total_amount = tax/100.to_f
     @salestax = @salestax.to_f+ ( price.to_f * total_amount.to_f )
@@ -27,7 +27,7 @@ class Sales_Tax_Problem
     input.include?("imported")
   end
 
-  def display(sentence,total_cost)
+  def display(sentence, total_cost)
     puts " output is: "
     
     for index in (0..2)
@@ -54,15 +54,15 @@ class Sales_Tax_Problem
       tax = item_imported(input) ? 5.00 : 0.00
 
       if item_exempted(input)
-        after_tax_cost=calucate_tax(tax,price)
+        after_tax_cost=calucate_tax(tax, price)
       else
-        after_tax_cost=total_tax(tax,price)
+        after_tax_cost=total_tax(tax, price)
       end
 
       total_cost[iterate] = after_tax_cost
     end
 
-    display(sentence,total_cost)
+    display(sentence, total_cost)
 
   end
 
